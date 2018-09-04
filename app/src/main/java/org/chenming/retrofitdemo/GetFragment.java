@@ -283,8 +283,7 @@ public class GetFragment extends Fragment {
         @Override
         public void onResponse(Call<List<Comments>> call, Response<List<Comments>> response) {
             Log.d(TAG, "Status code: " + response.code());
-            if (response.body() != null) {
-                Log.d(TAG, "List<Comments> size = " + response.body().size());
+            if (response.body().size() > 0) {
                 for (int i = 0; i < response.body().size(); i++) {
                     printResponse("<postId: " + response.body().get(i).getPostId());
                     printResponse("<id: " + response.body().get(i).getId());
