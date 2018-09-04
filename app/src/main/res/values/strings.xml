@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">RetrofitDemo</string>
+
+    <string name="navigation_get">GET</string>
+    <string name="navigation_post">POST</string>
+    <string name="navigation_put">PUT</string>
+    <string name="navigation_patch">PATCH</string>
+    <string name="navigation_delete">DELETE</string>
+
+    <string name="text_hint_id">id</string>
+    <string name="text_hint_uid_pid_aid">userId/postId/albumId</string>
+    <string name="text_hint_title_name">title/name</string>
+    <string name="text_hint_body_url">body/url</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_clear">Clear log</string>
+    <string name="subtitle_response">Response</string>
+    <string name="msg_undefined_req">Undefined Request</string>
+
+    <string-array name="resources_get">
+        <item>Posts</item>
+        <item>Comments</item>
+        <item>Albums</item>
+        <item>Photos</item>
+        <item>Todos</item>
+    </string-array>
+
+    <string-array name="resources_post">
+        <item>Posts</item>
+        <item>Comments</item>
+        <item>Albums</item>
+    </string-array>
+
+</resources>

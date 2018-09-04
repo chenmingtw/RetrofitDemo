@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteFragment">
+
+    <TextView
+        android:id="@+id/subtitle_response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/gap_small"
+        android:layout_marginLeft="@dimen/gap_small"
+        android:layout_marginStart="@dimen/gap_small"
+        android:text="@string/subtitle_response"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView_response"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/gap_small"
+        android:background="@drawable/shape_logview"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_response"
+        app:layout_constraintBottom_toTopOf="@+id/editText_id">
+        <TextView
+            android:id="@+id/textView_response"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.NestedScrollView>
+
+    <Spinner
+        android:id="@+id/spinner_resources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap_small"
+        android:padding="@dimen/gap_small"
+        android:background="@drawable/shape_logview"
+        android:entries="@array/resources_get"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_id"
+        app:layout_constraintBottom_toBottomOf="@id/editText_id"/>
+
+    <EditText
+        android:id="@+id/editText_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/gap_small"
+        android:hint="@string/text_hint_id"
+        android:inputType="number"
+        app:layout_constraintLeft_toRightOf="@+id/spinner_resources"
+        app:layout_constraintRight_toLeftOf="@+id/button_send"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/gap_small"
+        android:layout_marginEnd="@dimen/gap_small"
+        android:text="@string/btn_send"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editText_id"
+        app:layout_constraintBottom_toBottomOf="@id/editText_id"/>
+
+</android.support.constraint.ConstraintLayout>
