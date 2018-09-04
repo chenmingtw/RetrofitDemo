@@ -55,7 +55,7 @@ public class PostFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_post, container, false);
 
         sprRes = rootView.findViewById(R.id.spinner_resources);
-        editUidPidAid = rootView.findViewById(R.id.editText_id);
+        editUidPidAid = rootView.findViewById(R.id.editText_uid_pid_aid);
         editTitleName = rootView.findViewById(R.id.editText_title);
         editBodyUrl = rootView.findViewById(R.id.editText_body_url);
         btnSend = rootView.findViewById(R.id.button_send);
@@ -73,7 +73,7 @@ public class PostFragment extends Fragment {
     }
 
     private void sendRequest(String sRes) {
-        printResponse(">>>Send Request (" + sRes + ")");
+        printResponse(">>>Send Request (" + sRes.toLowerCase() + ")");
 
         switch (sRes) {
             case "Posts": {
