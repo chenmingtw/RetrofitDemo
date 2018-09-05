@@ -1,11 +1,16 @@
 package org.chenming.retrofitdemo.model;
 
 import java.util.List;
+import java.util.Map;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
+import retrofit2.http.Field;
+import retrofit2.http.FieldMap;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
@@ -44,6 +49,18 @@ public interface MyAPIService {
 
     @POST("comments")           // 用@Body表示要傳送Body資料
     Call<Comments> postComments(@Body Comments comments);
+
+    @FormUrlEncoded
+    @PATCH("albums/{id}")
+    Call<Albums> patchAlbums(@Path("id") int id, @Field("title") String title);
+
+    @FormUrlEncoded
+    @PATCH("posts/{id}")
+    Call<Posts> patchPosts(@Path("id") int id, @FieldMap Map<String, String> map);
+
+    @FormUrlEncoded
+    @PATCH("comments/{id}")
+    Call<Comments> patchComments(@Path("id") int id, @FieldMap Map<String, String> map);
 
     @DELETE("albums/{id}")
     Call<Albums> delAlbumsById(@Path("id") int id);

@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment showingFragment;
     GetFragment getFragment;
     PostFragment postFragment;
+    PatchFragment patchFragment;
     DeleteFragment deleteFragment;
 
     BottomNavigationView bottomNavigationView;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         showingFragment = new Fragment();
         getFragment = new GetFragment();
         postFragment = new PostFragment();
+        patchFragment = new PatchFragment();
         deleteFragment = new DeleteFragment();
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
@@ -42,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.navigation_post:
                         switchFragment(postFragment);
+                        return true;
+                    case R.id.navigation_patch:
+                        switchFragment(patchFragment);
                         return true;
                     case R.id.navigation_delete:
                         switchFragment(deleteFragment);
